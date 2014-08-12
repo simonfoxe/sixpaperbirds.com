@@ -1,0 +1,84 @@
+// variables
+@grid_columns: 12;
+@grid_width: 64px;
+@grid_margin: 20px;
+
+@gutter: 20px;
+
+@sprite-image: '../img/social.png';
+@sprite-grid: 24px;
+
+// colors
+@white: #fff;
+@gray_75: #ccc;
+@gray_50: #999;
+@gray_25: #666;
+@black: #333;
+
+@pitch: #000;
+@text: @black;
+@back: @white;
+
+@first: #FF6835;
+@second: #3181BE;
+@third: darken(#FFCE35, 15%);
+@fourth: darken(#29C87B, 5%);
+
+@first_75: mix(@gray_75, @first, 80%);
+@second_75: mix(@gray_75, @second, 80%);
+@third_75: mix(@gray_75, @third, 80%);
+
+@first_50: mix(@gray_50, @first, 80%);
+@second_50: mix(@gray_50, @second, 80%);
+@third_50: mix(@gray_50, @third, 80%);
+
+@first_25: mix(@gray_25, @first, 80%);
+@second_25: mix(@gray_25, @second, 80%);
+@third_25: mix(@gray_25, @third, 80%);
+
+// configs
+@site_shadow: 0 0 5px @first_75;
+@site_shadow_off: 0 0 0 @first_75;
+@site_transition: all .2s linear;
+
+@header_height: 50px;
+@header_wpbar_height: 28px;
+@header_height_total: @header_height + @header_wpbar_height;
+
+
+/*
+BASICS
+*/
+.lato() { font-family: 'Lato', sans-serif; font-weight: 300; }
+.poiret() { font-family: 'Poiret One', 'Lato', sans-serif; }
+
+
+body {
+	.lato();
+	font-weight: 300;
+	color: @text;
+	background-color: @back;
+	text-align: justify;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+a {
+	text-decoration: none;
+	.transition(@site_transition);
+
+	&:hover {
+		.transition(@site_transition);
+	}
+}
+
+.mono {
+	font-family: "Courier New", mono;
+}
+
+#page {
+	margin-top: @gutter*3;
+	margin-bottom: @gutter*8;
+}

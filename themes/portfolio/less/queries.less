@@ -1,0 +1,50 @@
+/* smartphone ----------- */
+@media only screen
+and (max-width : 513px) {
+	@grid_columns: 0;
+	.wrapper{ .grid_wrapper(); }
+	.row { .grid_row(); }
+	.col { .grid_column(@grid_columns); }
+
+	.pop { display: none; }
+}
+
+/* tablet ----------- */
+@media only screen
+and (min-width : 514px)
+and (max-width : 681px) {
+	@grid_columns: 6;
+	.wrapper{ .grid_wrapper(); }
+	.row { .grid_row(); }
+	.col { .grid_column(@grid_columns); }
+
+	.col_main,
+	.col_side { .grid_column(6); }
+
+	.pop { display: none; }
+}
+
+/* small screen ----------- */
+@media only screen
+and (min-width : 682px)
+and (max-width : 849px) {
+	@grid_columns: 8;
+	.wrapper{ .grid_wrapper(); }
+	.row { .grid_row(); }
+	.col { .grid_column(@grid_columns); }
+
+	.col_main { .grid_column(6); }
+	.col_side { .grid_column(2); }
+}
+
+/* desktop ----------- */
+@media only screen
+and (min-width : 850px) {
+	@grid_columns: 10;
+	.wrapper{ .grid_wrapper(); }
+	.row { .grid_row(); }
+	.col { .grid_column(@grid_columns); }
+
+	.col_main { .grid_column(8); }
+	.col_side { .grid_column(2); }
+}

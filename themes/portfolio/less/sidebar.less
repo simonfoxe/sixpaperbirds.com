@@ -1,0 +1,124 @@
+// header
+#header {
+	text-align: right;
+
+	h1 {
+		letter-spacing: 1px;
+		.poiret();
+		font-size: 1.7em;
+		margin: @gutter/5 0 @gutter/2;
+		padding: @gutter/5 0;
+		border-top: 1px solid @second_75;
+		border-bottom: 1px solid @second_75;
+
+		a {
+			color: @text;
+			display: block;
+		}
+	}
+
+	.description {
+		font-size: 1em;
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 0.8em;
+		color: @third;
+	}
+}
+
+// sidebar
+#sidebar {
+	text-align: right;
+
+	.widget {
+	}
+
+	// text
+	.pop {
+		font-size: 0.75em;
+		cursor: pointer;
+
+		.popper {
+			max-height: 0px;
+			overflow: hidden;
+			.transition(@site_transition);
+			color: @gray_50;
+		}
+
+		&:hover {
+			.popper {
+				max-height: 40px;
+				.transition(@site_transition);
+			}
+		}
+	}
+
+	// nav
+	nav {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			.clearfix();
+		}
+
+		li {
+		}
+
+		a {
+			display: block;
+		}
+
+		#menu-social {
+			float: right;
+
+			li {
+				float: left;
+				margin-left: @gutter/10;
+
+				&.social a {
+					.sprite-image();
+					.size(@sprite-grid);
+					.ir();
+
+					&:hover { .opacity(.5); }
+				}
+
+				&.facebook a { .sprite-pos(2, 0); }
+				&.linkedin a { .sprite-pos(0, 2); }
+				&.feed     a { .sprite-pos(5, 1); }
+			}
+		}
+
+		#menu-pages {
+			margin: @gutter 0;
+
+			li {
+				a {
+					padding: @gutter/10 0;
+					color: @second;
+					letter-spacing: 1px;
+
+					.arrow {
+						display: inline-block;
+						vertical-align: bottom;
+						position: relative;
+						top: -.3em;
+						.arrow(right, .4em, transparent);
+						.transition(@site_transition);
+					}
+
+					&:hover {
+						color: @second_25;
+
+						.arrow {
+							.arrow(right, .4em, @second_25);
+							.transition(@site_transition);
+						}
+					}
+				}
+			}
+		}
+	}
+}
